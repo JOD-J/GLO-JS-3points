@@ -1,0 +1,58 @@
+.header {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+.add__car {
+	margin-bottom: 10px;
+}
+.add__car-brand {
+}
+.add__car-model {
+}
+.add__car-release {
+}
+.add__car-mileage {
+}
+.filter__car {
+	margin-bottom: 50px;
+
+}
+.filter__car-brand {
+}
+.filter__car-model {
+}
+.filter__car-release {
+}
+.filter__car-mileage {
+}
+.main {
+}
+.table {
+}
+.thead {
+}
+.thead__num {
+}
+.thead__brand {
+}
+.thead__model {
+}
+.thead__release {
+}
+.thead__mileage {
+}
+.tbody {
+}
+.tbody__num {
+}
+.tbody__brand {
+}
+.tbody__model {
+}
+.tbody__release {
+}
+.tbody__mileage {
+}
+.tfoot {
+}
