@@ -14,7 +14,7 @@
 			<input class="add__car-model" type="text" placeholder = "Модель">
 			<input class="add__car-release" type="text" placeholder = "Год выпуска">
 			<input class="add__car-mileage" type="text" placeholder = "Пробег, км">
-			<button>Добавить авто</button>
+			<button class="add__car-btn">Добавить авто</button>
 		</div>
 		<div class="filter__car">
 			<input class="filter__car-brand" type="text" placeholder = "Марка">
@@ -26,24 +26,26 @@
 	<main class="main">
 		<table class="table">
 			<thead class="thead">
-				<tr>
-					<th class="thead__num">thead__num</th>
-					<th class="thead__brand">thead__brand</th>
-					<th class="thead__model">thead__model</th>
-					<th class="thead__release">thead__release</th>
-					<th class="thead__mileage">thead__mileage</th>
+				<tr class="thead__str">
+					<th class="thead__num">№</th>
+					<th class="thead__brand">Марка</th>
+					<th class="thead__model">Модель</th>
+					<th class="thead__release">Год выпуска</th>
+					<th class="thead__mileage">Пробег, км</th>
 				</tr>
 			</thead>
 			<tbody class="tbody">
-				<tr>
-					<th class="tbody__num">tbody__num</th>
-					<th class="tbody__brand">tbody__brand</th>
-					<th class="tbody__model">tbody__model</th>
-					<th class="tbody__release">tbody__release</th>
-					<th class="tbody__mileage">tbody__mileage</th>
+				<tr class="tbody__str">
+					<th class="tbody__num"></th>
+					<th class="tbody__brand"></th>
+					<th class="tbody__model"></th>
+					<th class="tbody__release"></th>
+					<th class="tbody__mileage"></th>
 				</tr>
 			</tbody>
-			<tfoot class="tfoot"></tfoot>
+			<tfoot class="tfoot">
+				<tr></tr>
+			</tfoot>
 		</table>
 	</main>
 </body>
