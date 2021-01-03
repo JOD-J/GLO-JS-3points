@@ -63,3 +63,8 @@
 }
 .tfoot {
 }
+.errorAddCar{
+	font-size: 20px;
+	color: red;
+	display: flex;
+}
