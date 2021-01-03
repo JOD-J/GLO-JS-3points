@@ -111,11 +111,11 @@ const filterAddCar = () => {
 			if (item.model === filterCarModelElem.value) {
 				return item.model === filterCarModelElem.value;
 			}
-			if (item.release === filterCarReleaseElem.value) {
-				return item.release === filterCarReleaseElem.value;
+			if (item.release === +filterCarReleaseElem.value) {
+				return item.release === Number(filterCarReleaseElem.value);
 			}
-			if (item.mileage === filterCarMileageElem.value) {
-				return item.mileage === filterCarMileageElem.value;
+			if (item.mileage === +filterCarMileageElem.value) {
+				return item.mileage === Number(filterCarMileageElem.value);
 			}
 		});
 		showArrCar(newArrCar);
@@ -126,32 +126,59 @@ const filterAddCar = () => {
 };
 //==============================================\\\\\\\filterAddCar======================================================
 
-//======================================================byField==========================================================
-function byField(field) {
-	return (a, b) => (a[field] > b[field] ? 1 : -1);
-}
-//==============================================\\\\\\\byField======================================================
 
 //======================================================sortCar==========================================================
 const sortCar = elem => {
 	if (elem.matches('.thead__brand')) {
 		tbodyElem.innerHTML = '';
-		arrCar.sort(byField('brand'));
+		arrCar.sort((a, b) => {
+			if (a.brand > b.brand) {
+				return 1;
+			}
+			if (a.brand < b.brand) {
+				return -1;
+			}
+			return 0;
+		});
 		showArrCar(arrCar);
 	}
 	if (elem.matches('.thead__model')) {
 		tbodyElem.innerHTML = '';
-		arrCar.sort(byField('mode'));
+		arrCar.sort((a, b) => {
+			if (a.model > b.model) {
+				return 1;
+			}
+			if (a.model < b.model) {
+				return -1;
+			}
+			return 0;
+		});
 		showArrCar(arrCar);
 	}
 	if (elem.matches('.thead__release')) {
 		tbodyElem.innerHTML = '';
-		arrCar.sort(byField('release'));
+		arrCar.sort((a, b) => {
+			if (a.release > b.release) {
+				return 1;
+			}
+			if (a.release < b.release) {
+				return -1;
+			}
+			return 0;
+		});
 		showArrCar(arrCar);
 	}
 	if (elem.matches('.thead__mileage')) {
 		tbodyElem.innerHTML = '';
-		arrCar.sort(byField('mileage'));
+		arrCar.sort((a, b) => {
+			if (a.mileage > b.mileage) {
+				return 1;
+			}
+			if (a.mileage < b.mileage) {
+				return -1;
+			}
+			return 0;
+		});
 		showArrCar(arrCar);
 	}
 };
