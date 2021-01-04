@@ -105,11 +105,11 @@ const filterAddCar = () => {
 	if (filterCarBrandElem.value !== '' || filterCarModelElem.value !== '' ||	filterCarReleaseElem.value !== '' || filterCarMileageElem.value !== '') {
 		tbodyElem.innerHTML = '';
 		const newArrCar = arrCar.filter(item => {
-			if (item.brand === filterCarBrandElem.value) {
-				return item.brand === filterCarBrandElem.value;
+			if (item.brand.toLowerCase() === filterCarBrandElem.value.toLowerCase()) {
+				return item.brand.toLowerCase() === filterCarBrandElem.value.toLowerCase();
 			}
-			if (item.model === filterCarModelElem.value) {
-				return item.model === filterCarModelElem.value;
+			if (item.model.toLowerCase() === filterCarModelElem.value.toLowerCase()) {
+				return item.model.toLowerCase() === filterCarModelElem.value.toLowerCase();
 			}
 			if (item.release === +filterCarReleaseElem.value) {
 				return item.release === Number(filterCarReleaseElem.value);
